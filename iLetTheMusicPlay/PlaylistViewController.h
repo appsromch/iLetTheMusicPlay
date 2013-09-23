@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PlaylistViewController.h
 //  iLetTheMusicPlay
 //
 //  Created by Ivelin Ivanov on 9/23/13.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface ViewController : UIViewController
+@interface PlaylistViewController : UITableViewController <MPMediaPickerControllerDelegate>
 
 @end

@@ -14,13 +14,15 @@
 		554255D617F05D3B006BF0F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 554255D517F05D3B006BF0F9 /* main.m */; };
 		554255DA17F05D3B006BF0F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 554255D917F05D3B006BF0F9 /* AppDelegate.m */; };
 		554255DD17F05D3B006BF0F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554255DB17F05D3B006BF0F9 /* Main.storyboard */; };
-		554255E017F05D3B006BF0F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554255DF17F05D3B006BF0F9 /* ViewController.m */; };
 		554255E217F05D3B006BF0F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554255E117F05D3B006BF0F9 /* Images.xcassets */; };
 		554255E917F05D3C006BF0F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255E817F05D3C006BF0F9 /* XCTest.framework */; };
 		554255EA17F05D3C006BF0F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255C917F05D3B006BF0F9 /* Foundation.framework */; };
 		554255EB17F05D3C006BF0F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255CD17F05D3B006BF0F9 /* UIKit.framework */; };
 		554255F317F05D3C006BF0F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 554255F117F05D3C006BF0F9 /* InfoPlist.strings */; };
 		554255F517F05D3C006BF0F9 /* iLetTheMusicPlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 554255F417F05D3C006BF0F9 /* iLetTheMusicPlayTests.m */; };
+		5542560517F0600F006BF0F9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5542560417F0600F006BF0F9 /* MediaPlayer.framework */; };
+		5542560817F061CC006BF0F9 /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5542560717F061CC006BF0F9 /* PlaylistViewController.m */; };
+		5595536917F0868E00E0260B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5595536817F0868E00E0260B /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,16 @@
 		554255D817F05D3B006BF0F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		554255D917F05D3B006BF0F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		554255DC17F05D3B006BF0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		554255DE17F05D3B006BF0F9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		554255DF17F05D3B006BF0F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		554255E117F05D3B006BF0F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		554255E717F05D3C006BF0F9 /* iLetTheMusicPlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iLetTheMusicPlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		554255E817F05D3C006BF0F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		554255F017F05D3C006BF0F9 /* iLetTheMusicPlayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iLetTheMusicPlayTests-Info.plist"; sourceTree = "<group>"; };
 		554255F217F05D3C006BF0F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		554255F417F05D3C006BF0F9 /* iLetTheMusicPlayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iLetTheMusicPlayTests.m; sourceTree = "<group>"; };
+		5542560417F0600F006BF0F9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		5542560617F061CC006BF0F9 /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistViewController.h; sourceTree = "<group>"; };
+		5542560717F061CC006BF0F9 /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewController.m; sourceTree = "<group>"; };
+		5595536817F0868E00E0260B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5595536917F0868E00E0260B /* AVFoundation.framework in Frameworks */,
+				5542560517F0600F006BF0F9 /* MediaPlayer.framework in Frameworks */,
 				554255CC17F05D3B006BF0F9 /* CoreGraphics.framework in Frameworks */,
 				554255CE17F05D3B006BF0F9 /* UIKit.framework in Frameworks */,
 				554255CA17F05D3B006BF0F9 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,8 @@
 		554255C817F05D3B006BF0F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5595536817F0868E00E0260B /* AVFoundation.framework */,
+				5542560417F0600F006BF0F9 /* MediaPlayer.framework */,
 				554255C917F05D3B006BF0F9 /* Foundation.framework */,
 				554255CB17F05D3B006BF0F9 /* CoreGraphics.framework */,
 				554255CD17F05D3B006BF0F9 /* UIKit.framework */,
@@ -115,10 +123,9 @@
 				554255D817F05D3B006BF0F9 /* AppDelegate.h */,
 				554255D917F05D3B006BF0F9 /* AppDelegate.m */,
 				554255DB17F05D3B006BF0F9 /* Main.storyboard */,
-				554255DE17F05D3B006BF0F9 /* ViewController.h */,
-				554255DF17F05D3B006BF0F9 /* ViewController.m */,
-				554255E117F05D3B006BF0F9 /* Images.xcassets */,
 				554255D017F05D3B006BF0F9 /* Supporting Files */,
+				5542560617F061CC006BF0F9 /* PlaylistViewController.h */,
+				5542560717F061CC006BF0F9 /* PlaylistViewController.m */,
 			);
 			path = iLetTheMusicPlay;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 		554255D017F05D3B006BF0F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				554255E117F05D3B006BF0F9 /* Images.xcassets */,
 				554255D117F05D3B006BF0F9 /* iLetTheMusicPlay-Info.plist */,
 				554255D217F05D3B006BF0F9 /* InfoPlist.strings */,
 				554255D517F05D3B006BF0F9 /* main.m */,
@@ -249,9 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554255E017F05D3B006BF0F9 /* ViewController.m in Sources */,
 				554255DA17F05D3B006BF0F9 /* AppDelegate.m in Sources */,
 				554255D617F05D3B006BF0F9 /* main.m in Sources */,
+				5542560817F061CC006BF0F9 /* PlaylistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +468,7 @@
 				554255FA17F05D3C006BF0F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		554255FB17F05D3C006BF0F9 /* Build configuration list for PBXNativeTarget "iLetTheMusicPlayTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +477,7 @@
 				554255FD17F05D3C006BF0F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
