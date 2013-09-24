@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5536027F17F1F610003633FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5536027E17F1F610003633FE /* Images.xcassets */; };
 		554255CA17F05D3B006BF0F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255C917F05D3B006BF0F9 /* Foundation.framework */; };
 		554255CC17F05D3B006BF0F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255CB17F05D3B006BF0F9 /* CoreGraphics.framework */; };
 		554255CE17F05D3B006BF0F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255CD17F05D3B006BF0F9 /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5536027E17F1F610003633FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		554255C617F05D3B006BF0F9 /* iLetTheMusicPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLetTheMusicPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		554255C917F05D3B006BF0F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		554255CB17F05D3B006BF0F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5536028017F1F631003633FE /* PlaylistViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5542560617F061CC006BF0F9 /* PlaylistViewController.h */,
+				5542560717F061CC006BF0F9 /* PlaylistViewController.m */,
+			);
+			name = PlaylistViewController;
+			sourceTree = "<group>";
+		};
 		554255BD17F05D3B006BF0F9 = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +133,7 @@
 				554255D917F05D3B006BF0F9 /* AppDelegate.m */,
 				554255DB17F05D3B006BF0F9 /* Main.storyboard */,
 				554255D017F05D3B006BF0F9 /* Supporting Files */,
-				5542560617F061CC006BF0F9 /* PlaylistViewController.h */,
-				5542560717F061CC006BF0F9 /* PlaylistViewController.m */,
+				5536028017F1F631003633FE /* PlaylistViewController */,
 			);
 			path = iLetTheMusicPlay;
 			sourceTree = "<group>";
@@ -135,6 +145,7 @@
 				554255D217F05D3B006BF0F9 /* InfoPlist.strings */,
 				554255D517F05D3B006BF0F9 /* main.m */,
 				554255D717F05D3B006BF0F9 /* iLetTheMusicPlay-Prefix.pch */,
+				5536027E17F1F610003633FE /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -233,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5536027F17F1F610003633FE /* Images.xcassets in Resources */,
 				554255D417F05D3B006BF0F9 /* InfoPlist.strings in Resources */,
 				554255DD17F05D3B006BF0F9 /* Main.storyboard in Resources */,
 			);
