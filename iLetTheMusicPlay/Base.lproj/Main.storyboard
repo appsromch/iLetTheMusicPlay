@@ -15,7 +15,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="YGs-fs-cWT" kind="relationship" relationship="rootViewController" id="TdO-hu-Y0A"/>
+                        <segue destination="Byq-af-De5" kind="relationship" relationship="rootViewController" id="gux-AG-hZb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2S-ev-wSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,85 +23,130 @@
             <point key="canvasLocation" x="292" y="135"/>
         </scene>
         <!--Playlist View Controller - Playlist-->
-        <scene sceneID="QDp-qf-xDt">
+        <scene sceneID="6Ly-fN-kfO">
             <objects>
-                <tableViewController id="YGs-fs-cWT" customClass="PlaylistViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="h9B-8l-5Ak">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" textLabel="hfu-7E-oXm" detailTextLabel="mFL-YU-Xco" rowHeight="60" style="IBUITableViewCellStyleValue1" id="ddM-Sq-Uez">
-                                <rect key="frame" x="0.0" y="86" width="320" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ddM-Sq-Uez" id="93K-n7-nKT">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hfu-7E-oXm">
-                                            <rect key="frame" x="15" y="19" width="33" height="21"/>
+                <viewController id="Byq-af-De5" customClass="PlaylistViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyN-zS-QYw"/>
+                        <viewControllerLayoutGuide type="bottom" id="bBG-jT-c8o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iBs-DA-Ns5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Sas-3Z-QvF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="406"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" textLabel="hfu-7E-oXm" detailTextLabel="mFL-YU-Xco" rowHeight="60" style="IBUITableViewCellStyleValue1" id="ddM-Sq-Uez">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ddM-Sq-Uez" id="93K-n7-nKT">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mFL-YU-Xco">
-                                            <rect key="frame" x="246" y="19" width="59" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="YGs-fs-cWT" id="ykz-oY-gIP"/>
-                            <outlet property="delegate" destination="YGs-fs-cWT" id="tV7-nt-9xu"/>
-                        </connections>
-                    </tableView>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hfu-7E-oXm">
+                                                    <rect key="frame" x="15" y="19" width="33" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mFL-YU-Xco">
+                                                    <rect key="frame" x="246" y="19" width="59" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Byq-af-De5" id="qy8-Xl-Qts"/>
+                                    <outlet property="delegate" destination="Byq-af-De5" id="nnr-4l-Lfa"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DN-oe-I2g">
+                                <rect key="frame" x="0.0" y="406" width="320" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mjd-I8-5cV">
+                                        <rect key="frame" x="18" y="10" width="284" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="Byq-af-De5" eventType="touchUpInside" id="VqS-6n-N8v"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mjd-I8-5cV" secondAttribute="trailing" constant="20" id="3lc-P9-oSz"/>
+                                    <constraint firstAttribute="height" constant="54" id="8GY-VX-IOi"/>
+                                    <constraint firstAttribute="bottom" secondItem="mjd-I8-5cV" secondAttribute="bottom" constant="11" id="RqV-OA-lay"/>
+                                    <constraint firstItem="mjd-I8-5cV" firstAttribute="top" secondItem="2DN-oe-I2g" secondAttribute="top" constant="10" id="fpC-5Y-UUx"/>
+                                    <constraint firstItem="mjd-I8-5cV" firstAttribute="leading" secondItem="2DN-oe-I2g" secondAttribute="leading" constant="20" id="qCZ-l3-m6X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2DN-oe-I2g" firstAttribute="leading" secondItem="iBs-DA-Ns5" secondAttribute="leading" id="0WF-iD-pn2"/>
+                            <constraint firstItem="Sas-3Z-QvF" firstAttribute="top" secondItem="jyN-zS-QYw" secondAttribute="bottom" id="0nZ-eS-Fsd"/>
+                            <constraint firstAttribute="trailing" secondItem="2DN-oe-I2g" secondAttribute="trailing" id="3Aw-H4-FOW"/>
+                            <constraint firstItem="Sas-3Z-QvF" firstAttribute="leading" secondItem="iBs-DA-Ns5" secondAttribute="leading" id="FyX-lK-cnN"/>
+                            <constraint firstItem="2DN-oe-I2g" firstAttribute="top" secondItem="Sas-3Z-QvF" secondAttribute="bottom" id="cqT-md-nDU"/>
+                            <constraint firstItem="bBG-jT-c8o" firstAttribute="top" secondItem="2DN-oe-I2g" secondAttribute="bottom" id="ige-YC-lds"/>
+                            <constraint firstAttribute="trailing" secondItem="Sas-3Z-QvF" secondAttribute="trailing" id="zjk-BM-T1Z"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems>
-                        <barButtonItem systemItem="rewind" id="YnD-v9-xoH">
+                        <barButtonItem systemItem="rewind" id="pth-Vb-Pgy">
                             <connections>
-                                <action selector="previousSong:" destination="YGs-fs-cWT" id="99b-bQ-piI"/>
+                                <action selector="previousSong:" destination="Byq-af-De5" id="Edj-N1-7YL"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="M1C-Tt-aTT"/>
-                        <barButtonItem systemItem="play" id="BCl-uU-f13">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="lxN-US-uyT"/>
+                        <barButtonItem systemItem="play" id="nMM-Ta-hhS">
                             <connections>
-                                <action selector="playPressed:" destination="YGs-fs-cWT" id="pne-tv-LiQ"/>
+                                <action selector="playPressed:" destination="Byq-af-De5" id="Uja-ly-Ea0"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="12Q-zo-dk0"/>
-                        <barButtonItem title="Item" systemItem="pause" id="lfF-j2-eWm">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yLd-8W-GbX"/>
+                        <barButtonItem systemItem="pause" id="Nd7-aq-VHd">
                             <connections>
-                                <action selector="pausePressed:" destination="YGs-fs-cWT" id="WOB-Ip-Jj5"/>
+                                <action selector="pausePressed:" destination="Byq-af-De5" id="QB6-l2-CRQ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="NaK-Uc-5jk"/>
-                        <barButtonItem systemItem="fastForward" id="asY-Mr-l3e">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="d2C-kn-Ree"/>
+                        <barButtonItem systemItem="fastForward" id="ThS-zq-ROp">
                             <connections>
-                                <action selector="nextSong:" destination="YGs-fs-cWT" id="ysq-aI-o1J"/>
+                                <action selector="nextSong:" destination="Byq-af-De5" id="3AZ-B2-ink"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Playlist" id="5Cc-Rn-ilV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xcm-c8-c1s">
+                    <navigationItem key="navigationItem" title="Playlist" id="Ads-rD-GrI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="f8B-aZ-GFH">
                             <connections>
-                                <action selector="pickSongs:" destination="YGs-fs-cWT" id="In2-hi-VBo"/>
+                                <action selector="pickSongs:" destination="Byq-af-De5" id="OGi-EV-Mxu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="pauseButton" destination="lfF-j2-eWm" id="76M-I8-Ug7"/>
-                        <outlet property="playButton" destination="BCl-uU-f13" id="6nU-zX-mhw"/>
+                        <outlet property="pauseButton" destination="Nd7-aq-VHd" id="q5H-CJ-DaJ"/>
+                        <outlet property="playButton" destination="nMM-Ta-hhS" id="fpe-KU-GoQ"/>
+                        <outlet property="slider" destination="mjd-I8-5cV" id="UGL-1d-rZB"/>
+                        <outlet property="tableView" destination="Sas-3Z-QvF" id="j1s-91-Sss"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Chq-A4-Qkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeL-cU-RAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757" y="135"/>
+            <point key="canvasLocation" x="835" y="135"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
