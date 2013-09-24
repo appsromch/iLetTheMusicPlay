@@ -81,7 +81,7 @@
                                         </connections>
                                     </slider>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="mjd-I8-5cV" secondAttribute="trailing" constant="20" id="3lc-P9-oSz"/>
                                     <constraint firstAttribute="height" constant="54" id="8GY-VX-IOi"/>
@@ -129,17 +129,23 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Playlist" id="Ads-rD-GrI">
+                        <barButtonItem key="leftBarButtonItem" title="Set order" id="z15-Py-FVB">
+                            <connections>
+                                <action selector="orderPressed:" destination="Byq-af-De5" id="UP1-Fp-DUF"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f8B-aZ-GFH">
                             <connections>
                                 <action selector="pickSongs:" destination="Byq-af-De5" id="OGi-EV-Mxu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="pauseButton" destination="Nd7-aq-VHd" id="q5H-CJ-DaJ"/>
                         <outlet property="playButton" destination="nMM-Ta-hhS" id="fpe-KU-GoQ"/>
+                        <outlet property="setOrderButton" destination="z15-Py-FVB" id="dRh-Mx-vsE"/>
                         <outlet property="slider" destination="mjd-I8-5cV" id="UGL-1d-rZB"/>
                         <outlet property="tableView" destination="Sas-3Z-QvF" id="j1s-91-Sss"/>
                     </connections>

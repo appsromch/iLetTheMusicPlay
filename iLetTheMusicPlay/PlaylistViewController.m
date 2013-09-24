@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *pauseButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *setOrderButton;
 
 
 - (IBAction)pickSongs:(id)sender;
@@ -28,6 +29,7 @@
 - (IBAction)playPressed:(id)sender;
 - (IBAction)pausePressed:(id)sender;
 - (IBAction)sliderChanged:(id)sender;
+- (IBAction)orderPressed:(id)sender;
 
 @end
 
@@ -42,13 +44,8 @@
     self.navigationController.toolbarHidden = NO;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(markCurrentSong)
+                                             selector:@selector(setUpForNewSong)
                                                  name:MPMusicPlayerControllerNowPlayingItemDidChangeNotification
-                                               object:self.musicPlayer];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(pauseMusic)
-                                                 name:MPMusicPlayerControllerPlaybackStateDidChangeNotification
                                                object:self.musicPlayer];
     
     self.slider.enabled = NO;
@@ -69,21 +66,7 @@
 
 #pragma mark - Player Methods
 
-- (void)pauseMusic
-{
-    if (self.musicPlayer.playbackState == MPMusicPlaybackStatePlaying)
-    {
-        self.pauseButton.enabled = YES;
-        self.playButton.enabled = NO;
-    }
-    else if (self.musicPlayer.playbackState == MPMusicPlaybackStatePaused)
-    {
-        self.playButton.enabled = YES;
-        self.pauseButton.enabled = NO;
-    }
-}
-
-- (void)markCurrentSong
+- (void)setUpForNewSong
 {
     self.duration = [[self.musicPlayer.nowPlayingItem valueForProperty:MPMediaItemPropertyPlaybackDuration] integerValue];
     self.slider.maximumValue = self.duration;
@@ -94,8 +77,7 @@
 
 - (IBAction)pickSongs:(id)sender
 {
-    MPMediaPickerController *picker =
-    [[MPMediaPickerController alloc] initWithMediaTypes: MPMediaTypeMusic];
+    MPMediaPickerController *picker = [[MPMediaPickerController alloc] initWithMediaTypes: MPMediaTypeMusic];
     
     picker.delegate = self;
     picker.allowsPickingMultipleItems = YES;
@@ -106,7 +88,19 @@
 
 - (IBAction)previousSong:(id)sender
 {
-    [self.musicPlayer skipToPreviousItem];
+    NSInteger currentIndex = self.musicPlayer.indexOfNowPlayingItem;
+    if (currentIndex - 1 >= 0)
+    {
+        [self.musicPlayer skipToPreviousItem];
+    }
+}
+
+- (IBAction)nextSong:(id)sender
+{
+    if (self.musicPlayer.indexOfNowPlayingItem + 1 < [self.playlist count])
+    {
+        [self.musicPlayer skipToNextItem];
+    }
 }
 
 - (IBAction)playPressed:(id)sender
@@ -132,17 +126,37 @@
     self.timeElapsed = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(incrementLabel) userInfo:nil repeats:YES];    
 }
 
-- (IBAction)nextSong:(id)sender
+- (IBAction)orderPressed:(id)sender
 {
-    [self.musicPlayer skipToNextItem];
+    if ([self.tableView isEditing])
+    {
+        [self.tableView setEditing:NO animated:YES];
+        [self setUpMusicPlayer];
+        self.setOrderButton.title = @"Set order";
+    }
+    else
+    {
+        [self.tableView setEditing:YES animated:YES];
+        self.setOrderButton.title = @"Done";
+    }
 }
 
 - (void)setUpMusicPlayer
 {
+    if ([self.playlist count] == 0) {
+        return;
+    }
+    
     [self.musicPlayer endGeneratingPlaybackNotifications];
     
     MPMediaItem *currentItem = self.musicPlayer.nowPlayingItem;
     NSTimeInterval currentInterval = self.musicPlayer.currentPlaybackTime;
+    
+    if (!currentItem) {
+        currentItem = self.playlist[0];
+    }
+    
+    MPMusicPlaybackState currentState = self.musicPlayer.playbackState;
         
     self.musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
     [self.musicPlayer setQueueWithItemCollection:[[MPMediaItemCollection alloc] initWithItems:self.playlist]];
@@ -153,7 +167,12 @@
         self.musicPlayer.currentPlaybackTime = currentInterval;
     }
     
-    [self.musicPlayer play];
+    if (currentState != MPMusicPlaybackStatePaused)
+    {
+        [self.musicPlayer play];
+    }
+    
+    self.musicPlayer.shuffleMode = MPMusicShuffleModeOff;
     
     [self.musicPlayer beginGeneratingPlaybackNotifications];
 }
@@ -225,7 +244,19 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+    MPMediaItem *movedItem = self.playlist[fromIndexPath.row];
+    [self.playlist removeObject:movedItem];
+    [self.playlist insertObject:movedItem atIndex:toIndexPath.row];
+}
+
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;
 }
@@ -246,6 +277,7 @@
     
     [self.tableView reloadData];
 }
+
 
 #pragma mark - MPMediaPickerDelegate Methods
 

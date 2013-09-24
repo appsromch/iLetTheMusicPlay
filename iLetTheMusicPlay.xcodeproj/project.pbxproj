@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5536023417F1BEAC003633FE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5536023217F1BEAC003633FE /* Icon.png */; };
-		5536023517F1BEAC003633FE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5536023317F1BEAC003633FE /* Icon@2x.png */; };
 		554255CA17F05D3B006BF0F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255C917F05D3B006BF0F9 /* Foundation.framework */; };
 		554255CC17F05D3B006BF0F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255CB17F05D3B006BF0F9 /* CoreGraphics.framework */; };
 		554255CE17F05D3B006BF0F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255CD17F05D3B006BF0F9 /* UIKit.framework */; };
@@ -16,7 +14,6 @@
 		554255D617F05D3B006BF0F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 554255D517F05D3B006BF0F9 /* main.m */; };
 		554255DA17F05D3B006BF0F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 554255D917F05D3B006BF0F9 /* AppDelegate.m */; };
 		554255DD17F05D3B006BF0F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554255DB17F05D3B006BF0F9 /* Main.storyboard */; };
-		554255E217F05D3B006BF0F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554255E117F05D3B006BF0F9 /* Images.xcassets */; };
 		554255E917F05D3C006BF0F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255E817F05D3C006BF0F9 /* XCTest.framework */; };
 		554255EA17F05D3C006BF0F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255C917F05D3B006BF0F9 /* Foundation.framework */; };
 		554255EB17F05D3C006BF0F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554255CD17F05D3B006BF0F9 /* UIKit.framework */; };
@@ -38,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5536023217F1BEAC003633FE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
-		5536023317F1BEAC003633FE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		554255C617F05D3B006BF0F9 /* iLetTheMusicPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLetTheMusicPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		554255C917F05D3B006BF0F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		554255CB17F05D3B006BF0F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,7 +46,6 @@
 		554255D817F05D3B006BF0F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		554255D917F05D3B006BF0F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		554255DC17F05D3B006BF0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		554255E117F05D3B006BF0F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		554255E717F05D3C006BF0F9 /* iLetTheMusicPlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iLetTheMusicPlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		554255E817F05D3C006BF0F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		554255F017F05D3C006BF0F9 /* iLetTheMusicPlayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iLetTheMusicPlayTests-Info.plist"; sourceTree = "<group>"; };
@@ -137,9 +131,6 @@
 		554255D017F05D3B006BF0F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5536023217F1BEAC003633FE /* Icon.png */,
-				5536023317F1BEAC003633FE /* Icon@2x.png */,
-				554255E117F05D3B006BF0F9 /* Images.xcassets */,
 				554255D117F05D3B006BF0F9 /* iLetTheMusicPlay-Info.plist */,
 				554255D217F05D3B006BF0F9 /* InfoPlist.strings */,
 				554255D517F05D3B006BF0F9 /* main.m */,
@@ -242,11 +233,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5536023417F1BEAC003633FE /* Icon.png in Resources */,
-				554255E217F05D3B006BF0F9 /* Images.xcassets in Resources */,
 				554255D417F05D3B006BF0F9 /* InfoPlist.strings in Resources */,
 				554255DD17F05D3B006BF0F9 /* Main.storyboard in Resources */,
-				5536023517F1BEAC003633FE /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
